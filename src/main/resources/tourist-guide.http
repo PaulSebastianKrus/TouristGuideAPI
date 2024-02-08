@@ -1,0 +1,26 @@
+### GET /attractions
+GET http://localhost:8080/attractions
+
+### GET /attractions/{name}
+GET http://localhost:8080/attractions/Tivoli
+
+### POST /attractions/add
+POST http://localhost:8080/attractions/add
+Content-Type: application/json
+
+{
+  "name": "Tivoli",
+  "description": "Forlystelsespark midt i København centrum"
+}
+
+### POST /attractions/update
+POST http://localhost:8080/attractions/update
+Content-Type: application/json
+
+{
+  "name": "Tivoli",
+  "description": "Opdateret beskrivelse for Tivoli"
+}
+
+### GET /attractions/delete/{name}
+GET http://localhost:8080/attractions/delete/Tivoli
