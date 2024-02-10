@@ -7,8 +7,7 @@ import tourism.service.TouristService;
 
 import java.util.List;
 @Controller
-@RestController
-@RequestMapping({"/", "/attractions"})
+@RequestMapping("/attractions")
 public class TouristController {
 
     private final TouristService touristService;
@@ -17,8 +16,7 @@ public class TouristController {
         this.touristService = touristService;
     }
 
-    // Endpoint to get all attractions
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<TouristAttraction>> getAttractions() {
         List<TouristAttraction> attractions = touristService.getAllAttractions();
         return ResponseEntity.ok(attractions);
@@ -36,14 +34,12 @@ public class TouristController {
         }
     }
 
-    // Endpoint to add a new attraction
     @PostMapping("/add")
     public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction attraction) {
         TouristAttraction addedAttraction = touristService.addAttraction(attraction);
         return ResponseEntity.status(201).body(addedAttraction);
     }
 
-    // Endpoint to update an existing attraction
     @PostMapping("/update")
     public ResponseEntity<TouristAttraction> updateAttraction(@RequestBody TouristAttraction updatedAttraction) {
         TouristAttraction attraction = touristService.updateAttraction(updatedAttraction.getName(), updatedAttraction);
@@ -54,8 +50,7 @@ public class TouristController {
         }
     }
 
-    // Endpoint to delete an attraction by name
-    @DeleteMapping("/delete/{name}")
+    @DeleteMapping("/attractions/delete/{name}")
     public ResponseEntity<Void> deleteAttraction(@PathVariable String name) {
         boolean deleted = touristService.deleteAttraction(name);
         if (deleted) {
@@ -64,4 +59,8 @@ public class TouristController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+
+
 }

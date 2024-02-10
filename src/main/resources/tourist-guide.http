@@ -24,3 +24,6 @@ Content-Type: application/json
 
 ### GET /attractions/delete/{name}
 GET http://localhost:8080/attractions/delete/Tivoli
+
+### GET /attractions/visit/{name}
+GET http://localhost:8080/

@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Baggrundsfarve for hele siden */
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigationsmenu styling */
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+a {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px; /* Ændre størrelsen til 16 pixels */
+    color: #007bff; /* Blå farve for links */
+    text-decoration: none;
+    position: relative; /* Tillader positionering af links */
+    z-index: 1; /* Sætter z-indekset til at overlappe billederne */
+    display: inline-block; /* Gør links til blokelementer for bedre layout */
+    padding: 5px; /* Tilføj lidt polstring for bedre visuel adskillelse */
+}
+
+a:hover {
+    text-decoration: underline; /* Understreg links ved hover */
+}
+
+/* Billedstørrelse for billeder inden for main-elementet */
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Sørger for at billeder ikke forstyrrer layoutet */
+    position: relative; /* Tillader positionering af billeder */
+    z-index: 0; /* Sætter z-indekset til at være bag links */
+}
+
+.text-box {
+    width: 900px;
+    height: 115px;
+    background-color: white;
+    border: 1px solid blue;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    line-height: 1.5;
+}

@@ -14,9 +14,9 @@ public class TouristRepository {
     //constructor
     public TouristRepository() {
 
-        attractions.add(new TouristAttraction("Eiffel Tower", "Iconic iron lattice tower in Paris."));
-        attractions.add(new TouristAttraction("Statue of Liberty", "Symbol of freedom in New York Harbor."));
-        attractions.add(new TouristAttraction("Tivoli", "Tivoli Gardens amusement park in central Copenhagen offers rides."));
+        attractions.add(new TouristAttraction("Runde Tårn", "Runde Tårn er et observatorie fra det 17. århundrede."));
+        attractions.add(new TouristAttraction("Nyhavn", "Nyhavn er en farverig kanal i København."));
+        attractions.add(new TouristAttraction("Tivoli", "Tivoli er en forlystelsespark i København."));
     }
 
     public List<TouristAttraction> getAllAttractions() {
@@ -24,7 +24,6 @@ public class TouristRepository {
     }
 
     public TouristAttraction getAttractionByName(String name) {
-        // Implement logic to retrieve attraction by name
         for (TouristAttraction attraction : attractions) {
             if (attraction.getName().equals(name)) {
                 return attraction;
@@ -34,13 +33,11 @@ public class TouristRepository {
     }
 
     public TouristAttraction addAttraction(TouristAttraction attraction) {
-        // Implement logic to add attraction
         attractions.add(attraction);
         return attraction;
     }
 
     public TouristAttraction updateAttraction(String name, TouristAttraction updatedAttraction) {
-        // Implement logic to update attraction
         for (int i = 0; i < attractions.size(); i++) {
             if (attractions.get(i).getName().equals(name)) {
                 attractions.set(i, updatedAttraction);
@@ -51,7 +48,6 @@ public class TouristRepository {
     }
 
     public boolean deleteAttraction(String name) {
-        // Implement logic to delete attraction
         for (TouristAttraction attraction : attractions) {
             if (attraction.getName().equals(name)) {
                 attractions.remove(attraction);

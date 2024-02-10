@@ -6,7 +6,6 @@ public class TouristAttraction {
     private String description;
 
     public TouristAttraction() {
-        // Default constructor for Spring Boot
     }
 
     public TouristAttraction(String name, String description) {
